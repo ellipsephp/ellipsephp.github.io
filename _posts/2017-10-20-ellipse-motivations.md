@@ -4,6 +4,16 @@ layout: post
 
 Lorem ipsum dolor sit amet, <a href="">consectetur</a> adipiscing elit. Cras sollicitudin ante non arcu fermentum pharetra. Phasellus ac efficitur turpis. Donec pulvinar eget dui ac semper. Morbi pretium turpis lectus, ut bibendum magna fermentum id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam in rhoncus justo. Vivamus molestie consequat finibus. Sed lacinia pretium lobortis. Curabitur interdum diam nec nunc euismod malesuada. Nam vel lobortis ex, eget elementum justo. Ut sed vulputate urna, eget finibus risus. Pellentesque luctus ante a mi luctus euismod sed at urna. Proin vel nisi dignissim, lacinia quam eget, ultricies tellus. Nam eget erat iaculis, porttitor dui auctor, auctor quam. Mauris sit amet euismod velit.
 
+{% highlight php %}
+<?php
+
+namespace App
+
+class Test {
+    
+}
+{% endhighlight %}
+
 Aliquam erat volutpat. Morbi vulputate porta leo, ac congue mauris interdum sed. Ut id est posuere, aliquet neque faucibus, mollis augue. Quisque iaculis dui gravida augue blandit tristique. Suspendisse euismod aliquet odio sed ultrices. Mauris scelerisque, orci non gravida porttitor, magna ante pharetra nunc, in fringilla ligula neque porttitor felis. Integer in mauris a tortor laoreet condimentum.
 
 Quisque consequat faucibus tortor sed malesuada. Proin lorem erat, pharetra vitae justo vitae, pretium vestibulum lectus. Nullam vel nibh vitae turpis vulputate pharetra. Donec ac enim et lectus fermentum tempor. Aliquam interdum nec felis sed dignissim. Vivamus pellentesque enim in placerat vulputate. Curabitur felis eros, tristique nec mollis in, congue pellentesque sapien. Vivamus hendrerit justo et mauris viverra, in finibus quam dignissim. Nulla aliquet suscipit eros a fermentum. Curabitur quis eleifend massa. Morbi sit amet sodales nunc. Pellentesque consequat leo id diam lobortis, in accumsan ipsum fringilla. Curabitur libero enim, pharetra vitae dui quis, sagittis aliquet leo. Sed rhoncus enim et libero pretium, quis tristique odio sodales. Nullam in scelerisque lectus. Suspendisse tempor odio quis lobortis vulputate.
