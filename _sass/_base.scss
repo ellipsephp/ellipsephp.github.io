@@ -1,0 +1,82 @@
+
+body {
+    font-family: $global-font-family;
+    line-height: 1.5;
+    color: $text-color;
+    background-color: $background-color;
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    &:hover {
+        color: $link-color-hover;
+    }
+    &:visited {
+        color: $link-color-visited;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0 0.5em;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: $type-size-3;
+}
+
+h2 {
+  font-size: $type-size-3;
+}
+
+h3 {
+  font-size: $type-size-4;
+}
+
+h4 {
+  font-size: $type-size-4;
+}
+
+h5 {
+  font-size: $type-size-4;
+}
+
+h6 {
+  font-size: $type-size-4;
+}
+
+small, .small {
+  font-size: $type-size-7;
+}
+
+p {
+  margin-bottom: 1.3em;
+}
+
+hr {
+  display: block;
+  margin: 1em 0;
+  border: 0;
+  border-top: 1px solid $border-color;
+}
+
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+            display: inline-block;
+            padding: 0 8px;
+            &:first-child, &:last-child {
+                padding-left: 0
+            }
+        }
+    }
+}
