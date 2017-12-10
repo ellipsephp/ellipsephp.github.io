@@ -8,10 +8,28 @@
         <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}">
     </head>
     <body>
-        <main>
+        <main class="container">
+            <header>
+                <h1>Pierre Mallinjoud</h1>
+                <nav>
+                    <ul>
+                        <li><a href="/">home</a></li>
+                        <li><a href="https://github.com/ellipsephp">github</a></li>
+                        <li><a href="{{ '/feed.xml' | absolute_url }}">subscribe</a></li>
+                        <li><a href="mailto:pierre.mallinjoud@gmail.com">contact</a></li>
+                    </li>
+                </nav>
+            </header>
+            <section>
+                <p>
+                    This is a place to share my though about web development.
+                </p>
+                <p>
+                    Most of the articles refers to <a href="https://github.com/ellipsephp">ellipse php packages</a>.
+                </p>
+            </section>
+            <hr>
             {{ content }}
         </main>
-        <footer>
-        </footer>
     </body>
 </html>

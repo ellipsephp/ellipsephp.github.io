@@ -1,9 +1,52 @@
 ---
 ---
 
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 @import 'normalize';
 @import 'syntax';
-@import 'variables';
-@import 'base';
-@import 'home';
-@import 'post';
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #444444;
+    text-rendering: optimizeLegibility;
+    padding-bottom: 6rem;
+}
+
+.hero {
+    background-color: #EEEEEE;
+}
+
+.container {
+    max-width: 768px;
+    margin: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #0e83cd;
+    font-weight: 300;
+    &> small {
+        color: #999999;
+        font-size: 0.4em;
+    }
+}
+
+
+a {
+    color: #0e83cd;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+figure {
+    margin-left: 0;
+    margin-right: 0;
+}

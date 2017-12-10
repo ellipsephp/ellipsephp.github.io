@@ -2,31 +2,6 @@
 layout: default
 ---
 <div id="home">
-    <header>
-        <div>
-            <img src="https://avatars1.githubusercontent.com/u/25299509?s=200&v=4">
-        </div>
-        <div>
-            <h1>Pierre Mallinjoud</h1>
-            <nav>
-                <ul>
-                    <li><a href="/">home</a></li>
-                    <li><a href="https://github.com/ellipsephp">github</a></li>
-                    <li><a href="{{ '/feed.xml' | absolute_url }}">subscribe</a></li>
-                    <li><a href="mailto:pierre.mallinjoud@gmail.com">contact</a></li>
-                </li>
-            </nav>
-        </div>
-    </header>
-    <section>
-        <p>
-            This is a place to share my though about web development.
-        </p>
-        <p>
-            Most of the articles refers to ellipse php packages.
-            Check the project on <a href="https://github.com/ellipsephp">github</a>.
-        </p>
-    </section>
     <h2>Recent Posts</h2>
     {% for post in site.posts limit:10 %}
     <article class="page__item" itemscope itemtype="http://schema.org/CreativeWork">
