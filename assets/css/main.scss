@@ -1,7 +1,7 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Heebo');
 
 @import 'normalize';
 @import 'syntax';
@@ -11,39 +11,65 @@ html {
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Heebo', sans-serif;
     color: #444444;
     text-rendering: optimizeLegibility;
-    padding-bottom: 6rem;
 }
 
-.hero {
-    background-color: #EEEEEE;
+body {
+    &> header {
+        display: flex;
+        nav {
+            margin-left: auto;
+            ul {
+                display: flex;
+                flex-direction: row;
+                list-style-type: none;
+                padding: 0;
+                li {
+                    a {
+                        display: block;
+                        padding: 1em;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .container {
-    max-width: 768px;
-    margin: auto;
-    padding-left: 1em;
-    padding-right: 1em;
+    max-width: 948px;
+    margin: 1em auto;
+    padding: 0 1em;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     color: #0e83cd;
-    font-weight: 300;
     &> small {
         color: #999999;
         font-size: 0.4em;
     }
 }
 
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #999999;
+    margin: 1em 0;
+    padding: 0;
+}
 
 a {
     color: #0e83cd;
     text-decoration: none;
     &:hover {
-        text-decoration: underline;
+        color: #56A6DC;
     }
+}
+
+p {
+    line-height: 1.4em;
 }
 
 figure {

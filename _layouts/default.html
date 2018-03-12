@@ -4,31 +4,22 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ellipse blog</title>
-        <link href="https://fonts.googleapis.com/css?family=Heebo:100,300,400,500,700,800,900" rel="stylesheet">
+        <link href="" rel="stylesheet">
         <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}">
     </head>
     <body>
+        <header class="container">
+            <h1><a href="/">Pierre Mallinjoud</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="https://github.com/ellipsephp">github</a></li>
+                    <li><a href="{{ '/feed.xml' | absolute_url }}">feed</a></li>
+                    <li><a href="mailto:pierre.mallinjoud@gmail.com">contact</a></li>
+                </li>
+            </nav>
+        </header>
+        <hr>
         <main class="container">
-            <header>
-                <h1>Pierre Mallinjoud</h1>
-                <nav>
-                    <ul>
-                        <li><a href="/">home</a></li>
-                        <li><a href="https://github.com/ellipsephp">github</a></li>
-                        <li><a href="{{ '/feed.xml' | absolute_url }}">subscribe</a></li>
-                        <li><a href="mailto:pierre.mallinjoud@gmail.com">contact</a></li>
-                    </li>
-                </nav>
-            </header>
-            <section>
-                <p>
-                    This is a place to share my though about web development.
-                </p>
-                <p>
-                    Most of the articles refers to <a href="https://github.com/ellipsephp">ellipse php packages</a>.
-                </p>
-            </section>
-            <hr>
             {{ content }}
         </main>
     </body>
