@@ -6,21 +6,28 @@
         <title>Ellipse blog</title>
         <link href="" rel="stylesheet">
         <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     </head>
     <body>
-        <header class="container">
-            <h1><a href="/">Pierre Mallinjoud</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="https://github.com/ellipsephp">github</a></li>
-                    <li><a href="{{ '/feed.xml' | absolute_url }}">feed</a></li>
-                    <li><a href="mailto:pierre.mallinjoud@gmail.com">contact</a></li>
-                </li>
-            </nav>
-        </header>
-        <hr>
         <main class="container">
-            {{ content }}
+            <header>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <section>
+                {{ content }}
+            </section>
         </main>
     </body>
 </html>

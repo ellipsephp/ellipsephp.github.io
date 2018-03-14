@@ -4,75 +4,59 @@
 @import url('https://fonts.googleapis.com/css?family=Heebo');
 
 @import 'normalize';
+@import 'scale';
 @import 'syntax';
-
-html {
-    font-size: 100%;
-}
 
 body {
     font-family: 'Heebo', sans-serif;
-    color: #444444;
-    text-rendering: optimizeLegibility;
+    color: #444;
 }
 
-body {
-    &> header {
+nav {
+    display: flex;
+    ul {
         display: flex;
-        nav {
-            margin-left: auto;
-            ul {
-                display: flex;
-                flex-direction: row;
-                list-style-type: none;
-                padding: 0;
-                li {
-                    a {
-                        display: block;
-                        padding: 1em;
-                    }
-                }
+        flex-direction: row;
+        list-style-type: none;
+        margin-left: auto;
+        padding: 0;
+        li {
+            a {
+                display: block;
+                margin: 0 0.5em;
+                padding: 0 0.5em;
             }
         }
     }
 }
 
 .container {
-    max-width: 948px;
-    margin: 1em auto;
+    max-width: 956px;
+    margin: 0 auto;
     padding: 0 1em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, a {
     color: #0e83cd;
-    &> small {
-        color: #999999;
-        font-size: 0.4em;
-    }
 }
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #999999;
-    margin: 1em 0;
-    padding: 0;
+h1, h2 {
+    border-bottom: 1px solid #eee;
+}
+
+h1 small {
+    color: #888;
+    font-weight: normal;
 }
 
 a {
-    color: #0e83cd;
     text-decoration: none;
     &:hover {
-        color: #56A6DC;
+        text-decoration: underline;
     }
 }
 
-p {
-    line-height: 1.4em;
-}
-
-figure {
-    margin-left: 0;
-    margin-right: 0;
+pre.highlight {
+    margin: 2em 0;
+    overflow-y: auto;
 }

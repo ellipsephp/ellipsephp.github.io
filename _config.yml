@@ -1,5 +1,12 @@
+highlighter: rouge
+
 sass:
     style: compressed
 
 plugins:
   - jekyll-feed
+
+collections:
+  articles:
+    output: true
+    permalink: /:name/
