@@ -24,12 +24,64 @@ a {
     }
 }
 
-header.headline {
-    h1 {
+small {
+    color: #888;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 1em auto;
+    padding: 0;
+}
+
+header.title {
+    h1, h2 {
         border-bottom: none;
     }
-    p {
-        color: #888;
+}
+
+header.headline {
+    small {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 43.75em) {
+    article.sumup {
+        display: table;
+        header, section {
+            display: table-cell;
+            vertical-align: top;
+        }
+        header {
+            h2, p {
+                margin: 0;
+            }
+            a {
+                display: block;
+                font-size: 0.8em;
+                text-align: right;
+                &:hover {
+                    margin-top: 1px;
+                    margin-bottom: -1px;
+                    text-decoration: none;
+                }
+            }
+        }
+        section {
+            p {
+                margin: 1em;
+            }
+            p:first-of-type {
+                margin-top: 0;
+            }
+            p:last-of-type {
+                margin-bottom: 0;
+            }
+        }
     }
 }
 

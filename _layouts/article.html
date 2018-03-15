@@ -3,21 +3,22 @@ layout: default
 ---
 <article itemscope itemtype="http://schema.org/CreativeWork">
 
-    {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.title %}<meta itemprop="headline" content="{{ page.title | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
-    {% if page.modified %}<meta itemprop="dateModified" content="{{ page.modified | date: "%B %d, %Y" }}">{% endif %}
 
-    <header class="headline">
+    <header class="headline title">
         <h1 itemprop="headline">
-            {{ page.title }}
+            {{ page.title | escape_once }}
         </h1>
         <p>
-            Posted on
-            <time datetime="{{ page.date | date_to_xmlschema }}">
-                {{ page.date | date: "%B %d, %Y" }}
-            </time>
-            by <a href="mailto:pierre.mallinjoud@gmail.com">Pierre Mallinjoud</a>
+            <small>
+                Posted on
+                <time datetime="{{ page.date | date_to_xmlschema }}">
+                    {{ page.date | date: "%B %d, %Y" }}
+                </time>
+                by <a href="mailto:pierre.mallinjoud@gmail.com">Pierre Mallinjoud</a>
+            </small>
         </p>
     </header>
 

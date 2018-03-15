@@ -1,17 +1,29 @@
 ---
 layout: default
 ---
-<div id="home">
+<h1>Latest articles</h1>
+<section class="sumup">
     {% for article in site.articles limit:10 %}
-    <article class="page__item" itemscope itemtype="http://schema.org/CreativeWork">
-        <h1 itemprop="headline">
-            <a href="{{ article.url }}" rel="permalink">
-                {{ article.title }}
-            </a>
-        </h1>
-        <p>
-            <time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: "%B %d, %Y" }}</time>
-        </p>
+    <article class="sumup" itemscope itemtype="http://schema.org/CreativeWork">
+        <header class="title">
+            <h2 itemprop="headline">
+                <a href="{{ article.url }}" rel="permalink">
+                    {{ article.title }}
+                </a>
+            </h2>
+        </header>
+        <section itemprop="text">
+            {{ article.excerpt | markdownify | strip_newlines }}
+            <p>
+                <small>
+                    Posted on
+                    <time datetime="{{ page.date | date_to_xmlschema }}">
+                        {{ article.date | date: "%B %d, %Y" }}
+                    </time>
+                </small>
+            </p>
+        </section>
     </article>
+    <hr>
     {% endfor %}
-</div>
+</section>
