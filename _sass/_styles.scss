@@ -1,0 +1,39 @@
+body {
+    font-family: 'Heebo', sans-serif;
+    color: #444;
+}
+
+.container {
+    max-width: 956px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+    color: #0e83cd;
+}
+
+h1, h2, header.headline {
+    border-bottom: 1px solid #eee;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+header.headline {
+    h1 {
+        border-bottom: none;
+    }
+    p {
+        color: #888;
+    }
+}
+
+pre.highlight {
+    margin: 2em 0;
+    overflow-y: auto;
+}

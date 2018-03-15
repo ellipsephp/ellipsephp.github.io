@@ -4,59 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Heebo');
 
 @import 'normalize';
-@import 'scale';
 @import 'syntax';
-
-body {
-    font-family: 'Heebo', sans-serif;
-    color: #444;
-}
-
-nav {
-    display: flex;
-    ul {
-        display: flex;
-        flex-direction: row;
-        list-style-type: none;
-        margin-left: auto;
-        padding: 0;
-        li {
-            a {
-                display: block;
-                margin: 0 0.5em;
-                padding: 0 0.5em;
-            }
-        }
-    }
-}
-
-.container {
-    max-width: 956px;
-    margin: 0 auto;
-    padding: 0 1em;
-}
-
-h1, h2, h3, h4, h5, h6, a {
-    color: #0e83cd;
-}
-
-h1, h2 {
-    border-bottom: 1px solid #eee;
-}
-
-h1 small {
-    color: #888;
-    font-weight: normal;
-}
-
-a {
-    text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-pre.highlight {
-    margin: 2em 0;
-    overflow-y: auto;
-}
+@import 'scale';
+@import 'nav';
+@import 'styles';

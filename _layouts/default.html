@@ -3,31 +3,46 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ellipse blog</title>
         <link href="" rel="stylesheet">
         <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}">
+        {% feed_meta %}
         <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        <title>Ellipse blog</title>
     </head>
     <body>
-        <main class="container">
-            <header>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
-            <section>
-                {{ content }}
-            </section>
+        <header class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/" title="home">
+                            <i class="fas fa-home"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/ellipsephp" title="ellipse" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/@pmallinj" title="@pmallinj" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:pierre.mallinjoud@gmail.com" title="pierre.mallinjoud@gmail.com" target="_blank">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ '/feed.xml' | absolute_url }}" title="rss feed" target="_blank">
+                            <i class="fas fa-rss"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main role="main" class="container">
+            {{ content }}
         </main>
     </body>
 </html>
