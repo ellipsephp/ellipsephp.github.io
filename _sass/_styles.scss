@@ -1,14 +1,14 @@
 body {
     font-family: 'Heebo', sans-serif;
-    color: #444;
+    color: $text-color;
 }
 
 h1, h2, h3, h4, h5, h6, a {
-    color: #0e83cd;
+    color: $primary-color;
 }
 
 h1, h2, header.headline {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid $gray-light;
 }
 
 a {
@@ -27,7 +27,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #eee;
+    border-top: 1px solid $gray-light;
     margin: 1em auto;
     padding: 0;
 }
@@ -70,13 +70,13 @@ article.sumup h3 {
         h3 {
             margin: 0;
             overflow: hidden;
-            border: 1px solid #888;
+            border: 1px solid $gray-light;
             border-radius: 0.2em;
             .bg {
                 visibility: visible;
             }
             &:hover {
-                border-color: #0e83cd;
+                border-color: $primary-color;
             }
         }
         header a {
