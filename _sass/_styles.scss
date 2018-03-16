@@ -14,6 +14,7 @@ h1, h2, header.headline {
 a {
     text-decoration: none;
     &:hover {
+        color: #3081b4;
         text-decoration: underline;
     }
 }
@@ -31,16 +32,12 @@ hr {
     padding: 0;
 }
 
-header.title {
-    h1, h2 {
-        border-bottom: none;
-    }
+header.headline h1 {
+    border-bottom: none;
 }
 
-header.headline {
-    small {
-        font-size: 1em;
-    }
+header.headline small {
+    font-size: 1em;
 }
 
 pre.highlight {
@@ -48,36 +45,52 @@ pre.highlight {
     overflow-y: auto;
 }
 
+article.sumup h3 {
+    position: relative;
+    .bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background-size: cover;
+        filter: blur(2px);
+        visibility: hidden;
+    }
+}
+
 @media (min-width: 43.75em) {
     article.sumup {
-        display: table;
-        header, section {
-            display: table-cell;
-            vertical-align: top;
+        display: flex;
+        margin: 0 -1em;
+        header, p {
+            padding: 0 1em;
         }
-        h2 {
+        h3 {
             margin: 0;
+            overflow: hidden;
+            border: 1px solid #888;
+            border-radius: 0.2em;
+            .bg {
+                visibility: visible;
+            }
+            &:hover {
+                border-color: #0e83cd;
+            }
         }
         header a {
             display: block;
-            font-size: 0.8em;
             text-align: right;
             padding: 1em;
-            background-color: #eee;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
             &:hover {
-                margin-top: 1px;
-                margin-bottom: -1px;
                 text-decoration: none;
             }
         }
-        p {
-            margin: 1em 0 1em 1em;
-            &:first-of-type {
-                margin-top: 0;
-            }
-            &:last-of-type {
-                margin-bottom: 0;
-            }
+        p:first-child {
+            margin-top: 0;
         }
     }
 }

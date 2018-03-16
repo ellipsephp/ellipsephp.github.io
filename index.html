@@ -1,16 +1,24 @@
 ---
 layout: default
 ---
-<h1>Latest articles</h1>
+<h1>Pierre Mallinjoud</h1>
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo sapien porttitor leo sodales, ut feugiat ante rhoncus. Proin euismod quis massa efficitur dapibus. Fusce enim ipsum, maximus eu tempor facilisis, vestibulum sed metus. Suspendisse tempor at lacus vel semper. In at velit fringilla, suscipit quam ut, condimentum sapien. Suspendisse eu rhoncus neque. Sed sodales justo sed dictum porttitor. Nulla nec leo id enim fringilla viverra a ut enim.
+</p>
+<p>
+    Donec a erat sit amet nulla lacinia imperdiet. Suspendisse aliquam nisi id elit convallis eleifend. Vestibulum a enim finibus, elementum quam at, ullamcorper lacus. Pellentesque ut lacus mauris. Aliquam condimentum erat vitae dapibus tincidunt. Quisque quis mattis tortor. Curabitur ut rutrum ante. Vivamus pellentesque congue risus, ac suscipit orci lobortis ac. Praesent vitae ex eu augue mattis vestibulum id ut diam. Etiam maximus malesuada sem, sit amet dignissim diam consectetur nec. Curabitur nec blandit felis.
+</p>
+<h2>Latest articles</h2>
 <section class="sumup">
     {% for article in site.articles limit:10 %}
     <article class="sumup" itemscope itemtype="http://schema.org/CreativeWork">
         <header class="title">
-            <h2 itemprop="headline">
+            <h3 itemprop="headline">
+                <div class="bg" style="background-image: url('/images/{{ article.image }}')"></div>
                 <a href="{{ article.url }}" rel="permalink">
                     {{ article.title }}
                 </a>
-            </h2>
+            </h3>
         </header>
         <section itemprop="text">
             {{ article.excerpt | markdownify | strip_newlines }}
