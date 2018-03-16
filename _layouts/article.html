@@ -17,7 +17,14 @@ layout: default
                 <time datetime="{{ page.date | date_to_xmlschema }}">
                     {{ page.date | date: "%B %d, %Y" }}
                 </time>
-                by <a href="mailto:pierre.mallinjoud@gmail.com">Pierre Mallinjoud</a>
+                by
+                {% if site.email %}
+                <a href="mailto:{{ site.email }}" title="{{ site.email }}" target="_blank">
+                    {{ site.owner }}
+                </a>
+                {% else %}
+                {{ site.owner }}
+                {% endif %}
             </small>
         </p>
     </header>
