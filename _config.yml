@@ -1,7 +1,8 @@
-owner: Pierre Mallinjoud
-email: pierre.mallinjoud@gmail.com
-github: ellipsephp
-twitter: pmallinj
+title: Blog title
+owner: Owner
+email: owner@example.com
+github: github_handle
+twitter: twitter_handle
 
 sass:
     style: compressed
