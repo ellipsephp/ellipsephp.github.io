@@ -46,6 +46,10 @@ pre {
     overflow-y: scroll;
 }
 
+code {
+    overflow-wrap: break-word;
+}
+
 article.sumup h3 {
     position: relative;
     .bg {
