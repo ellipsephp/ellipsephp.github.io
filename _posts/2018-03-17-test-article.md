@@ -1,6 +1,5 @@
 ---
-layout: article
-date: 2018-03-18
+layout: post
 image: test.png
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo sapien porttitor leo sodales, ut feugiat ante rhoncus. Proin euismod quis massa efficitur dapibus. Fusce enim ipsum, maximus eu tempor facilisis, vestibulum sed metus. Suspendisse tempor at lacus vel semper. In at velit fringilla, suscipit quam ut, condimentum sapien. Suspendisse eu rhoncus neque. Sed sodales justo sed dictum porttitor. Nulla nec leo id enim fringilla viverra a ut enim.

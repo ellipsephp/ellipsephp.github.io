@@ -13,8 +13,3 @@ sass:
 
 plugins:
   - jekyll-feed
-
-collections:
-  articles:
-    output: true
-    permalink: /:name/
