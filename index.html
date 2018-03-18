@@ -10,11 +10,14 @@ layout: default
 </p>
 <h2>Latest articles</h2>
 <section class="sumup">
-    {% for article in site.articles limit:10 %}
+    {% assign articles = site.articles | sort: 'date' | reverse %}
+    {% for article in articles limit:10 %}
     <article class="sumup" itemscope itemtype="http://schema.org/CreativeWork">
         <header class="title">
             <h3 itemprop="headline">
+                {% if article.image %}
                 <div class="bg" style="background-image: url('/images/{{ article.image }}')"></div>
+                {% endif %}
                 <a href="{{ article.url }}" rel="permalink">
                     {{ article.title }}
                 </a>
