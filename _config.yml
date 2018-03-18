@@ -6,6 +6,7 @@ owner: Owner
 email: owner@example.com
 github: github_handle
 twitter: twitter_handle
+disqus:
 
 sass:
     style: compressed
