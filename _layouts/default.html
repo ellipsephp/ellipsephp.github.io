@@ -3,6 +3,33 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:url" content="{{ page.url | absolute_url }}">
+        <meta property="og:type" content="article">
+        <meta property="og:locale" content="{{ site.locale }}">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@{{ site.twitter }}">
+        <meta name="twitter:creator" content="@{{ site.twitter }}">
+        {% if page.title %}
+        <meta property="og:title" content="{{ page.title }}">
+        <meta name="twitter:title" content="{{ page.title }}">
+        {% else %}
+        <meta property="og:title" content="{{ site.title }}">
+        <meta name="twitter:title" content="{{ site.title }}">
+        {% endif %}
+        {% if page.excerpt %}
+        <meta property="og:description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">
+        <meta name="twitter:description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">
+        {% else %}
+        <meta property="og:description" content="{{ site.description }}">
+        <meta name="twitter:description" content="{{ site.description }}">
+        {% endif %}
+        {% if page.image %}
+        <meta property="og:image" content="{{ site.url }}/images/{{ page.image }}">
+        <meta name="twitter:image" content="{{ site.url }}/images/{{ page.image }}">
+        {% else %}
+        <meta property="og:image" content="{{ site.url }}/images/{{ site.image }}">
+        <meta name="twitter:image" content="{{ site.url }}/images/{{ site.image }}">
+        {% endif %}
         <link href="" rel="stylesheet">
         <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}">
         {% feed_meta %}

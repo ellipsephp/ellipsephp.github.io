@@ -1,4 +1,7 @@
 title: Blog title
+description: Blog description
+locale: en_US
+image: blog-image.png
 owner: Owner
 email: owner@example.com
 github: github_handle
