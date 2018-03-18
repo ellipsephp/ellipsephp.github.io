@@ -1,12 +1,12 @@
-title: Blog title
-description: Blog description
+title: Ellipse php blog
+description: Ellipse php blog
 locale: en_US
-image: blog-image.png
-owner: Owner
-email: owner@example.com
-github: github_handle
-twitter: twitter_handle
-disqus:
+image: psr-15.png
+owner: Pierre Mallinjoud
+email: pierre.mallinjoud@gmail.com
+github: ellipsephp
+twitter: pmallinj
+disqus: pmall-github-io
 
 sass:
     style: compressed
