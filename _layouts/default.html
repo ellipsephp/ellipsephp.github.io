@@ -37,63 +37,59 @@
         <title>{{ site.title }}</title>
     </head>
     <body>
-        <div class="wrap">
-            <div class="container">
-                <header>
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="/" title="home">
-                                    <i class="fas fa-home"></i>
-                                </a>
-                            </li>
-                            {% if site.github %}
-                            <li>
-                                <a href="https://github.com/{{ site.github }}" title="{{ site.github }}" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </li>
-                            {% endif %}
-                            {% if site.twitter %}
-                            <li>
-                                <a href="https://twitter.com/{{ site.twitter }}" title="{{ site.twitter }}" target="_blank">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            {% endif %}
-                            {% if site.email %}
-                            <li>
-                                <a href="mailto:{{ site.email }}" title="{{ site.email }}" target="_blank">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                            </li>
-                            {% endif %}
-                            <li>
-                                <a href="{{ '/feed.xml' | absolute_url }}" title="rss feed" target="_blank">
-                                    <i class="fas fa-rss"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </header>
-                <main role="main">
-                    {{ content }}
-                </main>
-            </div>
-            <footer>
-                {% if site.email %}
-                <a href="mailto:{{ site.email }}" title="{{ site.email }}" target="_blank">
-                    {{ site.owner }}
-                </a>
-                {% else %}
+        <header class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/" title="home">
+                            <i class="fas fa-home"></i>
+                        </a>
+                    </li>
+                    {% if site.github %}
+                    <li>
+                        <a href="https://github.com/{{ site.github }}" title="{{ site.github }}" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.twitter %}
+                    <li>
+                        <a href="https://twitter.com/{{ site.twitter }}" title="{{ site.twitter }}" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.email %}
+                    <li>
+                        <a href="mailto:{{ site.email }}" title="{{ site.email }}" target="_blank">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                    <li>
+                        <a href="{{ '/feed.xml' | absolute_url }}" title="rss feed" target="_blank">
+                            <i class="fas fa-rss"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main role="main" class="container">
+            {{ content }}
+        </main>
+        <footer>
+            {% if site.email %}
+            <a href="mailto:{{ site.email }}" title="{{ site.email }}" target="_blank">
                 {{ site.owner }}
-                {% endif %}
-                -
-                Powered by
-                <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>
-                and
-                <a href="https://pages.github.com/" target="_blank">Github pages</a>
-            </footer>
-        </div>
+            </a>
+            {% else %}
+            {{ site.owner }}
+            {% endif %}
+            -
+            Powered by
+            <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>
+            and
+            <a href="https://pages.github.com/" target="_blank">Github pages</a>
+        </footer>
     </body>
 </html>
