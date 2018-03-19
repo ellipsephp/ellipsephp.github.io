@@ -78,7 +78,7 @@ Many things can be achieved with middleware. On the top of my head:
 - Add general purpose variables to the template engine
 - Choose among a set of request handlers and use it to produce a response (routing)
 
-I think this is a beautiful pattern because it abstracts the essence of the web in a simple but modular way. Instead of relying on configuration values and conditionals, one can add or remove functionality by adding or removing middleware.
+I think this is a beautiful pattern because it abstracts the essence of the web in a simple but modular way. Instead of relying on configuration values and conditionals, one can toggle functionalities by adding or removing middleware.
 
 Yet tools are needed to manage the creation of those layered structures. I released such a tool with the [ellipse/handlers](https://githib.com/ellipsephp/handlers) package providing a minimal set of classes needed to easily dispatch a request through a list of PSR-15 middleware. Lets review it step by step in the next sections.
 
@@ -199,4 +199,4 @@ Here the middleware list is treated as a queue, meaning they process the request
 
 ## Conclusion
 
-Classes provided by the [ellipse/handlers](https://githib.com/ellipsephp/handlers) package can be used as a basic way to articulate PSR-15 instances together. More complex mechanism are usually used to deal with lists of middleware, like resolving callables and container entries as actual middleware instances. I will present in a future article how this can be achieved with the [ellipse pakages](https://githib.com/ellipsephp).
+Classes provided by the [ellipse/handlers](https://githib.com/ellipsephp/handlers) package can be used as a basic way to articulate PSR-15 instances together. More complex mechanisms are usually applied when dealing with lists of middleware, like resolving callables and container entries as actual middleware instances. I will present in a future article how this can be achieved with the [ellipse pakages](https://githib.com/ellipsephp).
