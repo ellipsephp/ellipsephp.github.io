@@ -11,6 +11,10 @@ h1, h2, header.headline {
     border-bottom: 1px solid $gray-light;
 }
 
+small {
+    color: #888;
+}
+
 a {
     text-decoration: none;
     &:hover {
@@ -19,8 +23,23 @@ a {
     }
 }
 
-small {
-    color: #888;
+img {
+    display: block;
+    width: 100%;
+    margin: auto;
+    @media (min-width: 43.75em) {
+        width: 80%;
+    }
+}
+
+pre {
+    margin: 2em 0;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+code {
+    overflow-wrap: break-word;
 }
 
 hr {
@@ -38,16 +57,6 @@ header.headline h1 {
 
 header.headline small {
     font-size: 1em;
-}
-
-pre {
-    margin: 2em 0;
-    max-width: 100%;
-    overflow-x: auto;
-}
-
-code {
-    overflow-wrap: break-word;
 }
 
 article.sumup h3 {
