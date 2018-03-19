@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        {% site.analytics %}
+        {% if site.analytics %}
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics }}"></script>
         <script>
@@ -13,7 +13,7 @@
         {% endif %}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        {% site.verification %}
+        {% if site.verification %}
         <meta name="google-site-verification" content="{{ site.verification }}" />
         {% endif %}
         <meta property="og:url" content="{{ page.url | absolute_url }}">
