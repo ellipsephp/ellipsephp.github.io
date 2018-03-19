@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="fr">
     <head>
+        {% site.analytics %}
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics }}"></script>
         <script>
@@ -9,9 +10,12 @@
             gtag('js', new Date());
             gtag('config', '{{ site.analytics }}');
         </script>
+        {% endif %}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="google-site-verification" content="O6G7cbvd2h-wrkP9VksuX-70OG9EfjHA84_GYjvZHO8" />
+        {% site.verification %}
+        <meta name="google-site-verification" content="{{ site.verification }}" />
+        {% endif %}
         <meta property="og:url" content="{{ page.url | absolute_url }}">
         <meta property="og:type" content="article">
         <meta property="og:locale" content="{{ site.locale }}">
