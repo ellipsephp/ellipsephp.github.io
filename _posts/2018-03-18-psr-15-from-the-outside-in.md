@@ -3,7 +3,7 @@ layout: post
 image: psr-15.png
 ---
 
-I'm very glad the [PSR-15](https://www.php-fig.org/psr/psr-15/) specification has been approved. Standardizing middleware is very promising for the PHP ecosystem. In this article I will recapitulate what PSR-15 is about and present [a package I released](https://github.com/ellipsephp/handlers) to play with it.
+I'm very glad the [PSR-15](https://www.php-fig.org/psr/psr-15/) specification has been approved. Standardizing middleware is very promising for the PHP ecosystem. In this article I will recapitulate what PSR-15 is about and present two packages I released to play with it: [ellipse/handlers](https://github.com/ellipsephp/handlers) and [ellipse/dispatcher](https://github.com/ellipsephp/dispatcher).
 
 ![Psr-15](/images/psr-15.png)
 
