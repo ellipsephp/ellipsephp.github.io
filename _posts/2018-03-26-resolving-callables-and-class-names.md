@@ -9,7 +9,7 @@ In a previous article I explained how to use classes from [ellipse/handlers](htt
 
 ## Resolving callables
 
-It can be useful to use callables as middleware and request handler for small applications or for quick prototyping.
+It can be useful to use callables as middleware and request handlers for small applications or for quick prototyping.
 
 The packages [ellipse/middleware-callable](https://github.com/ellipsephp/middleware-callable) and [ellipse/handlers-callable](https://github.com/ellipsephp/handlers-callable) provide implementations of PSR-15 middleware and request handler using a callable to produce a response.
 
@@ -58,7 +58,7 @@ $response = $factory($fallback, [$middleware])->handle($request);
 
 This is useful yet it would be even easier to not have to instantiate `CallableMiddleware` and `CallableRequestHandler` for every callables.
 
-For this purpose, the [ellipse/dispatcher-callable](https://github.com/ellipsephp/dispatcher-callable) provides an `Ellipse\Dispatcher\ResolverCallable`class which can decorate any implementation of `Ellipse\DispatcherFactoryInterface`. This decorated `DispatcherFactory` automatically wraps `CallableMiddleware` and `CallableRequestHandler` instances around callables used when creating a `Dispatcher`.
+For this purpose, the [ellipse/dispatcher-callable](https://github.com/ellipsephp/dispatcher-callable) provides an `Ellipse\Dispatcher\ResolverCallable` class which can decorate any implementation of `Ellipse\DispatcherFactoryInterface`. This decorated `DispatcherFactory` automatically wraps `CallableMiddleware` and `CallableRequestHandler` instances around callables used when creating a `Dispatcher`.
 
 ```php
 <?php
