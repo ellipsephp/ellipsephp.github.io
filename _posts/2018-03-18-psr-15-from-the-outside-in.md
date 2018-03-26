@@ -160,7 +160,7 @@ The `Ellipse\Handlers\RequestHandlerWithMiddlewareStack` class can be used to de
 
 // ...
 
-use Ellipse\Dispatcher\RequestHandlerWithMiddlewareStack;
+use Ellipse\Handlers\RequestHandlerWithMiddlewareStack;
 
 // Same as above. Still follow the LIFO order.
 $app = new FallbackRequestHandler($response);
@@ -182,7 +182,7 @@ Another options is to use the `Ellipse\Handlers\RequestHandlerWithMiddlewareQueu
 
 // ...
 
-use Ellipse\Dispatcher\RequestHandlerWithMiddlewareQueue;
+use Ellipse\Handlers\RequestHandlerWithMiddlewareQueue;
 
 // Same as above but now follow the FIFO order.
 $app = new FallbackRequestHandler($response);
