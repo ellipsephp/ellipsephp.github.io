@@ -197,6 +197,39 @@ $response = $app->handle($request);
 
 Here the middleware list is treated as a queue, meaning they process the request in **FIFO** order (First In First Out). This is usually the order developers are the more comfortable with, but you are free to use the approach you want.
 
+## The ellipse/dispatcher package
+
+The [ellipse/dispatcher](https://github.com/ellipsephp/dispatcher) package provides an `Ellipse\DispatcherFactory` class which can be used to produce `Ellipse\Dispatcher` instances. A `Dispatcher` works the same as a `RequestHandlerWithMiddlewareQueue`. It also have a `->with()` method producing a new `Dispatcher` with an additional middleware wrapped around the previous `Dispatcher`.
+
+```php
+<?php
+
+// ...
+
+use Ellipse\DispatcherFactory;
+
+// Get a dispatcher factory.
+$factory = new DispatcherFactory;
+
+// Get a Dispatcher using the factory.
+$dispatcher1 = $factory(new FallbackRequestHandler($response), [
+    new TrailingSlashMiddleware,
+    new RoutingMiddleware($router),
+]);
+
+// Works the same way as in the previous example.
+$response = $dispatcher1->handle($request);
+
+// Another middleware can be wrapped around the dispatcher.
+$dispatcher2 = $dispatcher1->with(new ClientIpMiddleware);
+
+// The ClientIpMiddleware is the first to process the request and receive
+// $dispatcher1 as request handler.
+$response = $dispatcher2->handle($request);
+```
+
+I'll show in future articles how `DispatcherFactory` can be used in conjonction with resolvers to use many different types of value as PSR-15 instances.
+
 ## Conclusion
 
-Classes provided by the [ellipse/handlers](https://githib.com/ellipsephp/handlers) package can be used as a basic way to articulate PSR-15 instances together. More complex mechanisms are usually applied when dealing with lists of middleware, like resolving callables and container entries as actual middleware instances. I will present in a future article how this can be achieved with the [ellipse pakages](https://githib.com/ellipsephp).
+Classes provided by the [ellipse/handlers](https://githib.com/ellipsephp/handlers) package can be used as a basic way to articulate PSR-15 instances together. More complex mechanisms are usually applied when dealing with lists of middleware, like resolving callables and container entries as actual middleware instances. I will present in future articles how this can be achieved with the [ellipse/dispatcher](https://githib.com/ellipsephp/dispatcher) package as a starting point.
