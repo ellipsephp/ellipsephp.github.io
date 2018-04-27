@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo');
+
 body {
     font-family: 'Heebo', sans-serif;
     color: $text-color;
@@ -33,13 +35,24 @@ img {
 }
 
 pre {
-    margin: 2em 0;
+    margin: 0;
+    padding: 1em;
     max-width: 100%;
     overflow-x: auto;
 }
 
 code {
     overflow-wrap: break-word;
+}
+
+.highlighter-rouge {
+    font-size: 0.8em;
+    background-color: #f8f8f8;
+    border: 1px solid #f0f0f0;
+}
+
+code.highlighter-rouge {
+    padding: 0.2em;
 }
 
 hr {
