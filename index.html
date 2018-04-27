@@ -2,13 +2,15 @@
 layout: default
 ---
 <h1>{{ site.title }}</h1>
-<p>
-    Hi I'm <a href="mailto:pierre.mallinjoud@gmail.com">Pierre Mallinjoud</a>!
-</p>
-<p>
-    I'm a php developer, creator of the <a href="https://github.com/ellipsephp" target="_blank">ellipse</a> project.
-    This blog is a place where I share my through about web development and ellipse packages.
-</p>
+<div class="hero">
+    <p>
+        Hi I'm <a href="mailto:pierre.mallinjoud@gmail.com">Pierre Mallinjoud</a>!
+    </p>
+    <p>
+        I'm a php developer - maintainer of the <a href="https://github.com/ellipsephp" target="_blank">ellipse</a> project.
+        This blog is a place where I present ellipse packages and share my through about web development.
+    </p>
+</div>
 <h2>Latest articles</h2>
 <section class="sumup">
     {% assign posts = site.posts | sort: 'date' | reverse %}
