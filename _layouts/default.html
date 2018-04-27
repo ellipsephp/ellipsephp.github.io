@@ -47,7 +47,11 @@
         <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}">
         {% feed_meta %}
         <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-        <title>{{ site.title }}</title>
+        {% if page.title %}
+        <title>{{ page.title }} | @{{ site.twitter }}</title>
+        {% else %}
+        <title>{{ site.title }} | @{{ site.twitter }}</title>
+        {% endif %}
     </head>
     <body>
         <header class="container">
