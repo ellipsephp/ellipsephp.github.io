@@ -243,7 +243,7 @@ $fallback = new ContainerRequestHandler($container, NotFoundRequestHandler::clas
 // Returns hello world response when url path is /hello, not found response otherwise.
 // NotFoundRequestHandler instance is _not_ retrieved from the container when the middleware
 // returns a response.
-$response = $response($fallback, [$middleware])->handle($request);
+$response = $factory($fallback, [$middleware])->handle($request);
 ```
 
 As with the callable resolving example, instances of `ContainerMiddleware` and `ContainerRequestHandler` can be automatically wrapped around middleware and request handler class names using the `Ellipse\Dispatcher\ContainerResolver` class from the [ellipse/dispatcher-container](https://github.com/ellipsephp/dispatcher-container) package.
@@ -261,7 +261,7 @@ use Ellipse\Dispatcher\ContainerResolver;
 $factory = new ContainerResolver($container, new DispatcherFactory);
 
 // Works the same as in the previous example.
-$dispatcher = $response(NotFoundRequestHandler::class, [
+$dispatcher = $factory(NotFoundRequestHandler::class, [
     HelloMiddleware::class,
 ]);
 
@@ -304,7 +304,7 @@ $middleware = function ($request, $handler) {
 
 };
 
-$dispatcher = $response(NotFoundRequestHandler::class, [$middleware]);
+$dispatcher = $factory(NotFoundRequestHandler::class, [$middleware]);
 
 $response = $dispatcher->handle($request);
 ```
